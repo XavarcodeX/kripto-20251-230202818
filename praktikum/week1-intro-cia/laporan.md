@@ -1,95 +1,28 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Konsep CIA Triad 
+CIA merupakan model dasar dari keamanan tujuan konsep CIA triad dibuat untuk melindungi data pengguna dari ancaman serangan.
+-----------------------------------
+Cia terdiri dari 3 kata yaitu Confidentialy (kerahasiaan)
+Integrity  (integritas)
+Avaliability (ketersediaan)
+-----------------------------------
+#penjelasan CIA 
+Confidentialy kerahasiaan maksud dari kerahasiaan ini mengacu pada data bagaimana pengelolaan data tersebut jangan sampe ada suatu kebocoran dari pihak luar tentu akan sangat merugikan bukan? Tujuan dari confidential meliputi
+-Enkripsi data
+-penggunaan password
+-pembatasan akses dari celah yang rentan
+Integrity (integritas)
+artinya data dapat terjamin keasliaanya dan keakuratannya artinya perubahan data tersebut harus bisa di lacak adapun tujuan integritas melipiti
+-Checksum
+-version control seperti control admin panel,control servet database dll.
+Avaliability (ketersediaan)
+Prinsipnya disini data tersebut harus tersedia memastikan tidak ada gangguan operasional yang dapat menghambat suatu instansi atau organisasi Tujuannya meliputi
+-Memastikan tidak ada serangan Dos dan ddos
+-pastikan data di backup apabila terkena ransomware
+-load balancing
+-hooping memastikan paket data yang dikirim jangan sampe lolos akibat belum di ptoteksi firewall
+---------------------------------------
+By Muhammad Syaiful Anhar
 
 ---
 
-## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-
----
-
-## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
-
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
-
----
-
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
-
-## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
-
----
-
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
-
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
-
-## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
-
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
