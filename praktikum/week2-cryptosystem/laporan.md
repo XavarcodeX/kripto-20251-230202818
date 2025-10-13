@@ -8,7 +8,10 @@ Kelas: [5IKRA]
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+1.Mengidentifikasi komponen dasar kriptosistem (plaintext, ciphertext, kunci, algoritma).
+2.Menggambarkan proses enkripsi dan dekripsi sederhana.
+3.Mengklasifikasikan jenis kriptosistem (simetris dan asimetris).
 
 ---
 
@@ -97,7 +100,6 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
 Author: Muhammad Syaiful Anhar<email>
 Date:   2025-09-20
 
