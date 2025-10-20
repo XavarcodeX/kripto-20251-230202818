@@ -32,7 +32,8 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
 ## 5. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+
+
 def encrypt(plaintext, key):
     result = ""
     for char in plaintext:

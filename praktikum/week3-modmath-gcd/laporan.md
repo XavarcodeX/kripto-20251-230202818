@@ -1,21 +1,22 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 3
+Topik: [mood math]  
+Nama: [Muhammad Syaiful Anhar]  
+NIM: [230202818]  
+Kelas: [5IKRA]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+1.Meneyelesaikan operasi aritmatika modular
+2. Menentukan bilangan prima dan menghitung GCD (Greatest Common Divisor).  
+3. Menerapkan logaritma diskrit sederhana dalam simulasi kriptografi.  
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
+Dalam Kriptografi,sandi klasik adalah jenis sandi yang digunakan pada zaman dahulu,namun sekarang telah jarang dan hampir tidak pernah digunakan
+Berbeda dengan algoritma modern banyak sandi klasik dapat dipecahkan melalui perhitungan dan diselesaikan tanpa bantuan mesin meskipun demikian sandi klasik juga biasanya dapat sengan mudah dipecahkan melalui teknologi modern.Definisi umum Aritmatika modullar adalah sistem operasi matematika yang berhubungan dengan sisa hasil pembagian suatu bilangan dengan kata lain,dua bilangan dikatakan kongruen apabila jika keduanya memiliki sisa yang sama apabila dibagi oleh n
 ---
 
 ## 3. Alat dan Bahan
@@ -41,37 +42,35 @@ Gunakan blok kode:
 
 ```python
 # contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+def mod_add(a,b,n):return (a+b) % n
+def mod_sub(a,b,n):return (a-b) % n
+def mod_mul(a,b,n):return (a*b) % n
+def mod_exp(base,exp,n)return pow (base,exp,n) //eksponisasi modular
+
+print("7+5 mod 12=", mod_add (7,5,12))#hasilnya 0 karena sisanya 0
+print("7*5 mod 12=", mod_mul(7,5,12))#hasilnya 11 karena 35-24 hasilnya=11 
+print("7^128 mod 13=", mod_exp(7,128,13))
+
+```python
+def egcd(a,b):
+    while b!=0:
+        a,b=b,a % b
+        return a
+    print ("gcd(54,24)=", gcd(54,24))#hasilnya 6 karena 54:24=2 24 x 2 hasilnya 48 maka hasilnya adalah = 6
 
 ---
 
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Aritmatika modular berperan krusial dalam kriptografi modern dengan menyediakan kerangka kerja untuk perhitungan yang aman dan efisien, terutama pada algoritma kunci seperti RSA dan Diffie-Hellman,serta mendukung algoritma kunci simetris seperti AES   
+- Pertanyaan 2: Invers modular sangat penting dalam algoritma kunci publik karena digunakan untuk menghitung kunci privat dari kunci publik dalam algoritma seperti RSA.
+-pertanyaan 3:di perhitungannya juga tergantung angkanya berapa. 
 )
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+(Kesimpulannya adalah aritmatika modular, invers modular sangat penting karena masing masing memiliki peran penting dalam menghitung kunci privat dan publik.  )
 
 ---
 
@@ -88,7 +87,7 @@ Contoh:
 Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Muhammad Syaiful Anhar <ipuleditor007@gmail.com>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
