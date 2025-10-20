@@ -78,13 +78,30 @@ Decrypted : <230202818><Muhammad Syaiful Anhar >
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Komponen utama dalam kriptosistem adalah:
+plaintext --> pesan asli yang akan di enkripsi
+Ciphertext --> Pesan yang sudah dienkripsi.
+Algortitma enkripsi --> proses atau rumus untuk mengubah plaintext menjadi ciphertext.
+Algoritma dekripsi --> proses untuk mengembalikan ciphertext menjadi plaintext.
+- Pertanyaan 2: Kelebihan:
+-lebih cepat dan efisien untuk data besar
+-Algoritmanya lebih sederhana
+-Tidak perlu berbagi kunci rahasia secara langsung
+-Lebih aman untuk komunikasi terbuka
+Kelemahan:
+-Distribusi kunci sulit (harus dikirim secara aman).
+-Tidak cocok untuk komunikasi terbuka banyak pihak
+-Proses enkripsi atau decrypt lebih lambat
+>Pertanyaan 3
+Distribusi kunci menjadi masalah utama karena :
+dalam sistem simetris,pengirim dan penerima harus memiliki kunci yang sama,dan kunci tersebut harus dijaga kerahasiaannya. jika kunci disadap saat dikirim,maka seluruh komunikasi dapat dibobol karena pihak penyadap dapat mengenkripsi dan mendecrypt pesan kesemula.
 )
 ---
 
 ## 8. Kesimpulan
-Saya mencoba manual sendiri dengan menuliskan kode nya lewat android di code text atau text editor nya memakai py android hasilnya ada yang eror karena spasi nya dan harus di rapihkan kode nya agar bisa berjalan
+Cryptosistem adalah sistem untuk melindungi kerahasiaan data 
+Terdiri dari komponen plaintext,ciphertext kunci dan algoritma 
+Proses enkripsi mengamankan data,sementara dekripsi mengembalikannya
 
 ---
 
@@ -100,7 +117,7 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-Author: Muhammad Syaiful Anhar<email>
+Author: Muhammad Syaiful Anhar<ipuleditor007@gmail.com>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
