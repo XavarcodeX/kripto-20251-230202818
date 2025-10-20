@@ -86,9 +86,9 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit week3_moodmath
 Author: Muhammad Syaiful Anhar <ipuleditor007@gmail.com>
 Date:   2025-09-20
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week3-modmath: implementasi Caesar Cipher dan laporan )
 ```
