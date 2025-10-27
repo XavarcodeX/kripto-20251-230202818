@@ -1,14 +1,22 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 4  
+Topik: [Entropy unicity]  
+Nama: [Muhammad Syaiful Anhar]  
+NIM: [230202818]  
+Kelas: [5IKRA]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+(Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+
+Menyelesaikan perhitungan sederhana terkait entropi kunci.
+Menggunakan teorema Euler pada contoh perhitungan modular & invers.
+Menghitung unicity distance untuk ciphertext tertentu.
+Menganalisis kekuatan kunci berdasarkan entropi dan unicity distance.
+Mengevaluasi potensi serangan brute force pada kriptosistem sederhana.
+
+)
 
 ---
 
@@ -65,8 +73,9 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Entropy berfusngsi untuk mengukur ketidak pastian atau keacakan dari suatu fungsi semakin tinggi entrophy nya maka semakin susah untuk ditebak 
+- Pertanyaan 2: unicity distance sangat penting untuk menentukan jumlah minimal chipher text yang di butuhkan untuk dapat menentukan kunci secara unik
+- pertanyaan 3:karena bruteforce sendiri merupakan serangan yang umum digunakan nah selain itu masih banyak orang orang yang menggunakan password dengan entropy rendah 
 )
 ---
 
