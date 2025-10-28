@@ -1,14 +1,19 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 5
+Topik: [Chiper klasik]  
+Nama: [Muhammad Syaiful Anhar]  
+NIM: [230202818]  
+Kelas: [5IKRA]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+
+Menerapkan algoritma Caesar Cipher untuk enkripsi dan dekripsi teks.
+Menerapkan algoritma Vigenère Cipher dengan variasi kunci.
+Mengimplementasikan algoritma transposisi sederhana.
+Menjelaskan kelemahan.
 
 ---
 
@@ -65,8 +70,43 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Kelemahan Algoritma caesar cipher:
+- Ruang kunci sangat kecil hanya mod 25 bisa dipecahkan dengan bruterforce
+- pola huruf masih terlihat biasanya ewakili huruf E dan A pada plaintext
+- Tetap berulang katanya seperti lemon setiap perhitungan alphabet dan huruf jika di posisisikan maka kata lemon akan terus berulang.
+  vignere cipher:
+-sama dengan caesar cipher pola muncul
+-Masih rentan terhadap analisis frekuensi blok
+-kunci sering tidak di acak
+- Pertanyaan 2:
+- karena tidak di sembunyikan alias mudah ditebak penyerang tinggal melihat pola huruf nya saja
+- pertanyaan 3:
+Aspek   |cipher Substitusi
+---------------------------
+cara kerja|mengganti setiap huruf                pada huruf lain
+contoh    |Caesar vignerre
+Tujuan utama|menyamarkan makna huruf
+pola frekuensi huruf|Masih dapat                           terlihat meskipun berubah simbol
+Analisis frekuensi|lebih mudah                           diserang karena distribusi huruf tetap
+kelebihan|sederhana mudah                       diimplementasikan
+kelemahan|pola bahasa masih bisa dikenali
+
+Cipher Transposisi
+------------------
+Mengubah urutan huruf tanpa menggantinya
+------------------------
+Rail Fence,Columnar Transpotation
+------------------------
+Menyamarkan urutan huruf
+------------------------
+Distribusi huruf tetap sama,hanya urutannya berubah
+-----------‐-------------
+sedikit lebih sulit tapi masih bisa dipecahkan dengan pola posisi
+-------------------------
+tidak mengubah isi huruf,hanya struktur
+-------------------------
+mudah dipecahkan jika pola transposisi diketahui
+
 )
 ---
 
