@@ -81,15 +81,16 @@ Hasil eksekusi program Caesar Cipher:
 - Pertanyaan 2:
 - karena tidak di sembunyikan alias mudah ditebak penyerang tinggal melihat pola huruf nya saja
 - pertanyaan 3:
-Aspek   |cipher Substitusi
----------------------------
-cara kerja|mengganti setiap huruf                pada huruf lain
-contoh    |Caesar vignerre
-Tujuan utama|menyamarkan makna huruf
-pola frekuensi huruf|Masih dapat                           terlihat meskipun berubah simbol
-Analisis frekuensi|lebih mudah                           diserang karena distribusi huruf tetap
-kelebihan|sederhana mudah                       diimplementasikan
-kelemahan|pola bahasa masih bisa dikenali
+|Aspek   |cipher Substitusi|
+| **Aspek** | **Cipher Substitusi** |
+|------------|------------------------|
+| **Cara kerja** | Mengganti setiap huruf dengan huruf lain |
+| **Contoh** | Caesar, Vigenère |
+| **Tujuan utama** | Menyamarkan makna huruf |
+| **Pola frekuensi huruf** | Masih dapat terlihat meskipun berubah simbol |
+| **Analisis frekuensi** | Lebih mudah diserang karena distribusi huruf tetap |
+| **Kelebihan** | Sederhana, mudah diimplementasikan |
+| **Kelemahan** | Pola bahasa masih bisa dikenali |
 
 Cipher Transposisi
 ------------------
