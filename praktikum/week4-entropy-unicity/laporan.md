@@ -52,20 +52,57 @@ Gunakan blok kode:
 
 ```python
 # contoh potongan kode
-def encrypt(text, key):
-    return ...
+import math
+
+def entropy(A):
+    return math.log2(A)
+
+def unicity_distance(HK, R=0.75, A=26):
+    return HK / (R * math.log2(A))
+
+HK = entropy(26)
+print("Unicity Distance untuk Caesar Cipher =", unicity_distance(HK))
+
+Unicity Distance untuk Caesar Cipher = 1.3333333333333333
+
+[Program finished]
+
+# contoh potongan kode 2
+import math
+
+def entropy(keyspace_size):
+    return math.log2(keyspace_size)
+
+print("Entropy ruang kunci 26 =", entropy(26), "bit")
+print("Entropy ruang kunci 2^128 =", entropy(2**128), "bit")
+
+Entropy ruang kunci 26 = 4.700439718141092 bit
+Entropy ruang kunci 2^128 = 128.0 bit
+
+[Program finished]
+
+# contoh potongan kode 3
+def brute_force_time(keyspace_size, attempts_per_second=1e6):
+    seconds = keyspace_size / attempts_per_second
+    days = seconds / (3600*24)
+    return days
+
+print("Waktu brute force Caesar Cipher (26 kunci) =", brute_force_time(26), "hari")
+print("Waktu brute force AES-128 =", brute_force_time(2**128), "hari")
+
+Waktu brute force Caesar Cipher (26 kunci) = 3.0092592592592593e-10 hari
+Waktu brute force AES-128 = 3.938453320844195e+27 hari
+
+[Program finished]
+
 ```
 )
 
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
+(Kode tersebut menghitung Unicity Distance dari Caesar Cipher, yaitu ukuran banyaknya ciphertext yang dibutuhkan untuk menebak kunci secara unik.
+Hasil perhitungannya menunjukkan Unicity Distance = 1, artinya cipher ini sangat lemah, karena cukup satu huruf terenkripsi saja kuncinya sudah bisa ditebak. Caesar Cipher tidak aman digunakan dalam kriptografi modern.
 
 ![Hasil Eksekusi](screenshots/output.png)
 ![Hasil Input](screenshots/input.png)
@@ -83,7 +120,7 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+( )
 
 ---
 
