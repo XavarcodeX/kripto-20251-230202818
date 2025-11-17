@@ -48,10 +48,63 @@ Gunakan blok kode:
 
 ```python
 # contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
+from Crypto.Cipher import DES
+from Crypto.Random import get_random_bytes
+
+key = get_random_bytes(8)  # kunci 64 bit (8 byte)
+cipher = DES.new(key, DES.MODE_ECB)
+
+plaintext = b"ABCDEFGH"
+ciphertext = cipher.encrypt(plaintext)
+print("Ciphertext:", ciphertext)
+
+decipher = DES.new(key, DES.MODE_ECB)
+decrypted = decipher.decrypt(ciphertext)
+print("Decrypted:", decrypted)
+
+Ciphertext: b'\xc5{\xf8\xeb\xf0\xf1\x9eT'
+Decrypted: b'ABCDEFGH'
+
+[Program finished]
+
+#contoh potongan kode
+
+from Crypto.Cipher import AES
+from Crypto.Random import get_random_bytes
+
+key = get_random_bytes(16)  # 128 bit key
+cipher = AES.new(key, AES.MODE_EAX)
+
+plaintext = b"Modern Cipher AES Example"
+ciphertext, tag = cipher.encrypt_and_digest(plaintext)
+
+print("Ciphertext:", ciphertext)
+
+# Dekripsi
+cipher_dec = AES.new(key, AES.MODE_EAX, nonce=cipher.nonce)
+decrypted = cipher_dec.decrypt(ciphertext)
+print("Decrypted:", decrypted.decode())
+
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+
+# Generate key pair
+key = RSA.generate(2048)
+private_key = key
+public_key = key.publickey()
+
+# Enkripsi dengan public key
+cipher_rsa = PKCS1_OAEP.new(public_key)
+plaintext = b"RSA Example"
+ciphertext = cipher_rsa.encrypt(plaintext)
+print("Ciphertext:", ciphertext)
+
+# Dekripsi dengan private key
+decipher_rsa = PKCS1_OAEP.new(private_key)
+decrypted = decipher_rsa.decrypt(ciphertext)
+print("Decrypted:", decrypted.decode())
 )
+
 
 ---
 
@@ -72,14 +125,51 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Berikut deskripsi ringkas dan jelas tentang perbedaan mendasar antara DES, AES, dan RSA:
+
+
+---
+
+📌 Deskripsi Perbedaan DES, AES, dan RSA
+
+DES (Data Encryption Standard) adalah algoritma enkripsi simetris yang menggunakan satu kunci yang sama untuk enkripsi dan dekripsi. Panjang kuncinya hanya 56 bit, sehingga sekarang dianggap tidak aman karena mudah dipecahkan dengan serangan brute-force. DES dulu digunakan secara luas, tetapi sekarang hanya dipakai untuk tujuan pembelajaran atau sistem lama (legacy).
+
+AES (Advanced Encryption Standard) juga merupakan algoritma simetris, tetapi jauh lebih kuat dan modern dibanding DES. AES menggunakan kunci yang jauh lebih panjang, yaitu 128 bit, 192 bit, atau 256 bit, sehingga keamanan AES sangat tinggi dan masih digunakan sebagai standar global untuk enkripsi data, termasuk oleh pemerintah, bank, aplikasi komunikasi, hingga protokol internet modern.
+
+RSA (Rivest–Shamir–Adleman) berbeda dari DES dan AES karena merupakan algoritma asimetris. RSA memakai dua kunci: public key untuk enkripsi dan private key untuk dekripsi. Ukuran kunci RSA jauh lebih besar, biasanya 2048 bit atau lebih, karena metode keamanannya berdasarkan kesulitan memfaktorkan bilangan prima besar. RSA tidak digunakan untuk mengenkripsi data dalam jumlah besar, tetapi dipakai untuk pertukaran kunci, tanda tangan digital, dan otentikasi.
+
+
+---
+
+DES: Simetris, kunci kecil, tidak aman.
+
+AES: Simetris, kunci panjang, sangat aman dan cepat.
+
+RSA: Asimetris, dua kunci, digunakan untuk keamanan komunikasi, bukan untuk enkripsi data besar.
+
+- Pertanyaan 2:
+AES lebih banyak digunakan dibanding DES karena DES sudah tidak aman, sementara AES menawarkan keamanan yang jauh lebih tinggi dengan performa yang lebih cepat dan efisien. DES hanya memiliki kunci 56 bit, yang membuatnya sangat mudah dipecahkan menggunakan brute-force dengan komputer modern. Serangan yang butuh bertahun-tahun di era 1980–1990 kini bisa diselesaikan dalam hitungan jam atau bahkan menit.
+
+Pertanyaan 3:
+RSA disebut algoritma asimetris karena menggunakan dua kunci yang berbeda:
+
+Public key → digunakan untuk enkripsi atau memverifikasi tanda tangan.
+
+Private key → digunakan untuk dekripsi atau membuat tanda tangan digital.
+
+
+Kedua kunci ini berkaitan secara matematis, tetapi tidak mungkin mendapatkan private key hanya dari public key.
+Inilah yang membuat RSA disebut asimetris — tidak seperti algoritma simetris (DES, AES) yang memakai satu kunci yang sama.
 )
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+hasilnya menunjukan bahwa Aes menawarkan bit yang banyak daripada DES karena saya mencobanya di handphone menggunakan py android
+dengan output 
+Ciphertext: b'\xad\x181\x8d\xfb\x93\xd9\xcb'
+Decrypted: b'ABCDEFGH'
 
+[Program finished]
 ---
 
 ## 9. Daftar Pustaka
@@ -95,7 +185,7 @@ Contoh:
 Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Muhammad Syaiful Anhar<ipuleditor007@gmail.com>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
