@@ -1,14 +1,18 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 6
+Topik: [cipher modern]  
+Nama: [Muhammad Syaiful Anhar]  
+NIM: [230202818]  
+Kelas: [5IKRA]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+(Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:  
+1. Mengimplementasikan algoritma **DES** untuk blok data sederhana.  
+2. Menerapkan algoritma **AES** dengan panjang kunci 128 bit.  
+3. Menjelaskan proses pembangkitan kunci publik dan privat pada algoritma **RSA**.  
+.)
 
 ---
 
